@@ -29,4 +29,5 @@ if not os.path.exists('trainer'):
     os.makedirs('trainer')
 
 recognizer.save("trainer/face-trainner.yml")
+#recognizer.save("huanluyen/huanluyen.yml")
 cv2.destroyAllWindows()

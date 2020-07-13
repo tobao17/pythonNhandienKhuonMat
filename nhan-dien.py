@@ -37,12 +37,12 @@ while True:
         roi_color = img[y:y+h, x:x+w]
 
         nbr_predicted, conf = recognizer.predict(gray[y:y+h, x:x+w])
-        if conf < 70:
+        if conf < 70:   
             profile=getProfile(nbr_predicted)
             if profile != None:
                 cv2.putText(img, ""+str(profile[1]), (x+10, y), font, 1, (0,255,0), 1);
         else:
-            cv2.putText(img, "Unknown", (x, y + h + 30), font, 0.4, (0, 0, 255), 1);
+            cv2.putText(img, "Unknown", (x, y + h + 30), font, 0.4, (0, 255, 0), 1);
 
 
     cv2.imshow('img', img)

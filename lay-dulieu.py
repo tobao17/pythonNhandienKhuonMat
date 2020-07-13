@@ -26,9 +26,9 @@ def insertOrUpdate(id, name):
 face_cascade = cv2.CascadeClassifier('khuonMat.xml')
 cap = cv2.VideoCapture(0)
 
-id = '1'
-name = "bao"
-#insertOrUpdate(id, name)
+id = input('Enter user id: ')
+name = input('Enter name: ')
+insertOrUpdate(id, name)
 sample_number = 0
 while True:
     ret, img = cap.read()
